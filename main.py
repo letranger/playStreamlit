@@ -32,10 +32,7 @@ frequency_df = pd.DataFrame({'分數區間': frequency.index.astype(str), '頻�
 # 使用 Streamlit 顯示長條圖
 st.bar_chart(frequency_df.set_index('分數區間'))
 
-# 繪製四科的箱線圖
-boxplot_data = test.melt(id_vars=['學號'], value_vars=['國文', '英文', '數學', '物理'], var_name='科目', value_name='分數')
-fig = px.box(boxplot_data, x='科目', y='分數', title='各科分數的箱線圖')
-st.plotly_chart(fig)
+
 
 # KMeans 聚類
 # 使用滑桿選擇 k 值（聚類數量）
