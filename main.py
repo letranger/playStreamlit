@@ -1,6 +1,5 @@
 import pandas as pd
 import streamlit as st
-import plotly.express as px
 from sklearn.cluster import KMeans
 
 # 讀取資料
@@ -31,8 +30,6 @@ frequency_df = pd.DataFrame({'分數區間': frequency.index.astype(str), '頻�
 
 # 使用 Streamlit 顯示長條圖
 st.bar_chart(frequency_df.set_index('分數區間'))
-
-
 
 # KMeans 聚類
 # 使用滑桿選擇 k 值（聚類數量）
